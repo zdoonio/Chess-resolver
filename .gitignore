@@ -1,2 +1,6 @@
 # Ignoring files in GIT
 /.idea
+*.iml
+*.iws
+*.ipr
+out/
