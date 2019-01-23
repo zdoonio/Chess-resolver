@@ -1,4 +1,4 @@
-package resolver
+package game.board
 
 /**
   * Created by dominik.zdunczyk on 23.01.19.
@@ -22,8 +22,8 @@ object ChessBoard {
     *
     */
   def generate: ChessBoard = {
-    val rows = Utils.readBoardSize("Enter number of board rows: ", min = 0, max = 999)
-    val columns = Utils.readBoardSize("Enter number of board columns: ", min = 0, max = 18278)
+    val rows = Utils.readValueOf("Enter number of board rows: ", min = 0, max = 999)
+    val columns = Utils.readValueOf("Enter number of board columns: ", min = 0, max = 18278)
     ChessBoard(rows, columns)
   }
 }
