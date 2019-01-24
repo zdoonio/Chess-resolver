@@ -59,7 +59,7 @@ case class ChessPiece(
   }
 
   /**
-    * Returns boshops movement table
+    * Returns bishops movement table
     * @param row      row number
     * @param column   column number
     * @param game     game object
