@@ -28,7 +28,7 @@ case object Resolver {
     */
   def solve(game: Game): List[SolvedGame] = {
     (0 until (game.board.rows * game.board.columns / 2D).round.toInt).flatMap { i =>
-      val solvedGame = SolvedGame.init(game)
+      val solvedGame = init(game)
 
       val success = game.pieces.forall { gamePiece =>
         insertInFirstFreeSpot(i, solvedGame, gamePiece)

@@ -140,19 +140,3 @@ case class SolvedGame (
   private def boardSeparator: String = s"---${"+---" * game.board.columns}+\n"
 }
 
-object SolvedGame {
-
-  /**
-    * Initializes solved game with empty cells
-    *
-    * @param game game to solve object
-    * @return empty object of SolvedGame
-    */
-  def init(game: Game): SolvedGame = SolvedGame (game,
-    (0 until game.board.rows).toArray.map { n =>
-      (0 until game.board.columns).toArray.map { m =>
-        " "
-      }
-    }
-  )
-}
