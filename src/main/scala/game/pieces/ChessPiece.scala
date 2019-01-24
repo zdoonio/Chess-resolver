@@ -128,8 +128,8 @@ case class ChessPiece(
 object ChessPiece {
 
   /**
-    * Initializes number of game pieces of certain type
-    * @param pieceType type of game piece
+    * Initializes number of game pieces of each type
+    * @param chessman type of game piece
     * @return list of game pieces
     */
   def init(chessman: Chessman): List[ChessPiece] = {
