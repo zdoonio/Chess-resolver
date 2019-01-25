@@ -9,6 +9,15 @@ import resolver.Resolver
   */
 class ResolverTest extends FlatSpec with Matchers {
 
+  "Resolver" should "initialize empty board" in {
+
+    val board = ChessBoard(3,3)
+    val king = ChessPiece(Chessman.KING)
+    val resultArray: Array[Array[String]] = Array(Array(" ", " ", " "), Array(" ", " ", " "), Array(" ", " ", " "))
+
+    Resolver.init(Game(board, List(king))).result should be (resultArray)
+  }
+
   "Resolver" should "get all possible permutations for board 2x2 with two Rooks" in {
 
     val board = ChessBoard(2,2)

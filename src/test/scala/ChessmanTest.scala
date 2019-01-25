@@ -26,4 +26,34 @@ class ChessmanTest extends FlatSpec with Matchers {
     List((2, 3), (2, 5), (3, 2), (3, 6), (5, 2), (5, 6), (6, 3), (6, 5))
   }
 
+  "Rook" should "be able to move" in {
+
+    val board = ChessBoard(4,4)
+    val rook = ChessPiece(Chessman.ROOK)
+
+    rook.allMovementOptions(1,1, Game(board, List(rook))) should be
+    List((1, 2), (1, 3), (1, 4), (2, 1), (3, 1), (4, 1))
+
+  }
+
+  "Bishop" should "be able to move" in {
+
+    val board = ChessBoard(4,4)
+    val bishop = ChessPiece(Chessman.BISHOP)
+
+    bishop.allMovementOptions(1,1, Game(board, List(bishop))) should be
+    List((2, 2), (3, 3), (4, 4))
+
+  }
+
+  "Queen" should "be able to move" in {
+
+    val board = ChessBoard(4,4)
+    val queen = ChessPiece(Chessman.QUEEN)
+
+    queen.allMovementOptions(1, 1, Game(board, List(queen))) should be
+    List((1, 2), (1, 3), (1, 4), (2, 1), (3, 1), (4, 1), (2, 2), (3, 3), (4, 4))
+
+  }
+
 }
