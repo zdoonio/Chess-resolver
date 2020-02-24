@@ -6,13 +6,11 @@ import resolver.Resolver
   * Created by dominik.zdunczyk on 24.01.19.
   */
 object Main extends App {
+  println("Welcome in chess game resolver!")
+  val game = Game.init
+  val result = Utils.time(Resolver.solve(game))
 
-  override def main(args: Array[String]): Unit = {
-    println("Welcome in chess game resolver!")
-    val game = Game.init
-    val result = Utils.time(Resolver.solve(game))
+  println(result.mkString("\n"))
+  println(s"Number of results: ${result.length}")
 
-    println(s"Number of results: ${result.length}")
-    println(result.mkString("\n"))
-  }
 }
