@@ -10,20 +10,16 @@ import helper.Utils
   * @param rows     number of rows
   * @param columns  number of columns
   */
-case class ChessBoard(
-  var rows: Int,
-  var columns: Int
-)
+case class ChessBoard(rows: Int, columns: Int)
 
 object ChessBoard {
 
   /**
-    * Generate chess board
+    * Generate chess board with rows and columns
     *
     */
   def generate: ChessBoard = {
-    val rows = Utils.readValueOf("Enter number of board rows: ", min = 0, max = 999)
-    val columns = Utils.readValueOf("Enter number of board columns: ", min = 0, max = 18278)
-    ChessBoard(rows, columns)
+    ChessBoard(Utils.readValueOf("Enter number of board rows: ", min = 0, max = 999),
+      Utils.readValueOf("Enter number of board columns: ", min = 0, max = 18278))
   }
 }

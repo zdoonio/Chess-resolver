@@ -11,9 +11,7 @@ import helper.Utils
   * Chess piece object
   * @param chessman  type of chessman
   */
-case class ChessPiece(
-  var chessman: Chessman
-) {
+case class ChessPiece(chessman: Chessman) {
 
   /**
     * Returns all movement options of certain game piece
